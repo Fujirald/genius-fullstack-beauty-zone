@@ -1,25 +1,84 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url('../fonts/roboto-v48-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-weight: 600;
+    src: url('../fonts/roboto-v48-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Play';
+    font-weight: 400;
+    src: url('../fonts/play-v20-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Play';
+    font-weight: 700;
+    src: url('../fonts/play-v20-latin-700.woff2') format('woff2');
+}
+
 :root {
     --color-primary-light: #FFFFFF;
     --color-primary-dark: #011C44;
     --color-primary-brand: #2B7FFF;
+    --color-secondary-grey: #747272;
 }
 
 /* Base */
+* {
+    box-sizing: border-box;
+}
+
 body {
+    font-family: 'Roboto', sans-serif;
     color: var(--color-primary-dark);
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.section {
+    padding: 48px 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
 }
 
 ul {
     list-style-type: none;
 }
 
+address {
+    font-style: normal;
+}
+
+.conteiner {
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
 /* Button */
 .button {
+    padding: 16px 32px;
     color: var(--color-primary-light);
     background-color: var(--color-primary-brand);
     border: 2px solid var(--color-primary-brand);
     border-radius: 32px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .button:hover {
@@ -28,19 +87,125 @@ ul {
 }
 
 /* Link */
-.link {
+.link-header {
     color: var(--color-primary-dark);
+    text-decoration: none;
 }
 
-.link:hover {
+.link-header:hover {
     color: var(--color-primary-brand);
+    font-weight: 700;
 }
 
-/* Hero section */
-.hero-title {
+.link-footer {
+    color: var(--color-primary-light);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.link-footer:hover {
     color: var(--color-primary-brand);
+    font-weight: 700;
+}
+
+/* Title */
+.section-title {
+    font-family: 'Play', sans-serif;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 700;
 }
 
 .section-title .accent {
     color: var(--color-primary-brand);
+}
+
+/* Hero section */
+.hero-section {
+    padding: 122.52px 0 126.48px 0;
+}
+
+.hero-title {
+    width: 529px;
+    height: 228px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    color: var(--color-primary-brand);
+    font-family: 'Play', sans-serif;
+    text-transform: capitalize;
+    font-size: 140px;
+    font-weight: 700;
+    line-height: 0.8;
+}
+
+.hero-text {
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* About section */
+.about-section {
+    padding-bottom: 176px;
+}
+
+.about-section .capitalize {
+    text-transform: capitalize;
+}
+
+.about-title {
+    margin-bottom: 40px;
+}
+
+.about-text {
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+.about-text .capitalize {
+    font-weight: 600;
+}
+
+/* Advantages section */
+.advantages-section {
+    padding-top: 0;
+}
+
+.advantages-title {
+    margin-bottom: 48px;
+}
+
+.advantage-text {
+    line-height: 1.3;
+}
+
+/* Procedures section */
+.procedures-title {
+    margin-bottom: 48px;
+}
+
+.procedure-title {
+    color: var(--color-primary-light);
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+/* Contacs section */
+.contacs-title {
+    margin-bottom: 48px;
+}
+
+/* Footer */
+.adress-link {
+    color: var(--color-primary-light);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.adress-link:hover {
+    color: var(--color-primary-brand);
+}
+
+.adress-copyright {
+    color: var(--color-secondary-grey);
+    font-size: 13px;
 }
